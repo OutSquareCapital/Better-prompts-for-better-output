@@ -7,10 +7,10 @@ a collection of my WIP prompts engineering for chatgpt &amp; related LLM
 [[Coding Prompt]] is WIP
 
 to use:
-setup the personal instructions (or add them at the beginning of each prompt)
-copy paste the relevant instructions
-add your data and/or context
-finally, formulate your query
+- setup the personal instructions (or add them at the beginning of each prompt)
+- copy paste the relevant instructions
+- add your data and/or context
+- finally, formulate your query
 
 ### Personal Instructions
 parle français.
