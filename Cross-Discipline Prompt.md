@@ -1,9 +1,3 @@
-2025-01-0901:09
-
-Subject: [[AI Assistants]]
-
-# Cross-Discipline Prompt
-
 # Instructions
 
 
