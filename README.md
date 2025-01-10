@@ -14,9 +14,9 @@ to use:
 ### Personal Instructions
 parle français.
 Pour chaque demande que je t'adresse, je la séparerai en 2 parties:
-#INSTRUCTIONS:
+- #INSTRUCTIONS:
 cette partie t'indiquera comment conduire ton processus de raisonnement qui te permettra de répondre a ma demande.
-#DEMANDE:
+- #DEMANDE:
 le contenu concret de ma demande, qui devra donc être analysé et répondu en adhérant de manière STRICTE a mes instructions.
 
 sections optionnelles:
