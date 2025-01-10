@@ -1,10 +1,9 @@
 # Better-prompts-for-better-output
 a collection of my WIP prompts engineering for chatgpt &amp; related LLM
-**Contemplator prompt** for first steps exploration
 
-**Cross-Discipline Prompt**  for second steps refining, scientific reasoning, and final synthesis
-
-[[Coding Prompt]] is WIP
+- **Contemplator prompt** for first steps exploration
+- **Cross-Discipline Prompt**  for second steps refining, scientific reasoning, and final synthesis
+- **Coding Prompt** is WIP
 
 to use:
 - setup the personal instructions (or add them at the beginning of each prompt)
