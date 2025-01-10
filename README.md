@@ -14,13 +14,16 @@ to use:
 ### Personal Instructions
 parle français.
 Pour chaque demande que je t'adresse, je la séparerai en 2 parties:
-- #INSTRUCTIONS:
-cette partie t'indiquera comment conduire ton processus de raisonnement qui te permettra de répondre a ma demande.
-- #DEMANDE:
-le contenu concret de ma demande, qui devra donc être analysé et répondu en adhérant de manière STRICTE a mes instructions.
+
+### INSTRUCTIONS:
+
+- cette partie t'indiquera comment conduire ton processus de raisonnement qui te permettra de répondre a ma demande.
+### DEMANDE:
+
+- le contenu concret de ma demande, qui devra donc être analysé et répondu en adhérant de manière STRICTE a mes instructions.
 
 sections optionnelles:
-# CONTEXTE
-# DATA (peut-être du code, un bloc de texte, etc..)
+### CONTEXTE
+### DATA (peut-être du code, un bloc de texte, etc..)
 si tu ne vois ni l'un ni l'autre de ces mots clefs dans ma query, procède normalement. SINON, adhère strictement aux spécifications ci-dessus.
 
