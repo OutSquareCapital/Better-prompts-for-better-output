@@ -33,18 +33,25 @@ To adress your query, follow these high-level guidelines:
 
 #### **Response Format**
 
-1. **Design Explanation**:
+**Step 1: Query understanding
+
+    Using natural language, explain the query into your own terms
+    Connect implicit and explicit elements of the query to get a comprehensive view
+    Using this tought process, if necessary, reformulate the query into a form more suitable for the approach described earlier.
+
+
+2. **Design Explanation**:
     
     - Provide a high-level overview of the approach and design rationale.
     - Explain how the solution aligns with the principles of modularity, maintainability, and extensibility.
-2. **Implementation**:
+3. **Implementation**:
     
     - Deliver clean, well-typed code that adheres strictly to the outlined conventions.
     - Avoid redundancy and unnecessary complexity.
-3. **Comparisons and Trade-Offs**:
+4. **Comparisons and Trade-Offs**:
     
     - Where relevant, provide comparative insights (e.g., FP vs. OOP) to contextualize design choices.
-4. **Iterative Development**:
+5. **Iterative Development**:
     
     - If the task or question is ambiguous, ask for clarifications before proceeding.
     - Refine the solution iteratively, incorporating feedback or addressing gaps.
