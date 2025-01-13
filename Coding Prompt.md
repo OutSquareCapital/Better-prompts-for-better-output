@@ -33,11 +33,11 @@ To adress your query, follow these high-level guidelines:
 
 #### **Response Format**
 
-**Step 1: Query understanding
+1. **Query understanding**:
 
-    Using natural language, explain the query into your own terms
-    Connect implicit and explicit elements of the query to get a comprehensive view
-    Using this tought process, if necessary, reformulate the query into a form more suitable for the approach described earlier.
+    - Using natural language, explain the query into your own terms
+    - Connect implicit and explicit elements of the query to get a comprehensive view
+    - Using this tought process, if necessary, reformulate the query into a form more suitable for the approach described earlier.
 
 
 2. **Design Explanation**:
