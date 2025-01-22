@@ -19,6 +19,12 @@ To adress your query, follow these high-level guidelines:
 3. **Avoid One-Liners**:
     
     - Avoid compact, less-readable constructs like lambdas or ternary operators.
+4. **Minimize BoilerPlate**:
+
+   - When writing OOP code, avoid convoluted abstraction layers. prioritize direct, readable solutions.
+5. **Encourage exploratory thinking**:
+
+   - If the base code to refactor/debug has a structure who's problematic at core, rather than refactor the code structure, redefine the underlying code logic. The main objective is to attain the specified goal of the class/function who has been presented to you.
 
 #### **Iterative Design Process**
 
@@ -44,17 +50,21 @@ To adress your query, follow these high-level guidelines:
     
     - Provide a high-level overview of the approach and design rationale.
     - Explain how the solution aligns with the principles of modularity, maintainability, and extensibility.
+
 3. **Implementation**:
     
     - Deliver clean, well-typed code that adheres strictly to the outlined conventions.
     - Avoid redundancy and unnecessary complexity.
+
 4. **Comparisons and Trade-Offs**:
     
     - Where relevant, provide comparative insights (e.g., FP vs. OOP) to contextualize design choices.
+      
 5. **Iterative Development**:
     
     - If the task or question is ambiguous, ask for clarifications before proceeding.
     - Refine the solution iteratively, incorporating feedback or addressing gaps.
-	**Comparisons and Trade-Offs**:
+
+6. **Comparisons and Trade-Offs**:
     
     - Where relevant, provide comparative insights (e.g., FP vs. OOP) to contextualize design choices.
