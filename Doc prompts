@@ -35,22 +35,85 @@ Je veux que tu édite le fichier __init__.pyi de manière exhaustive pour mon pa
    - Alway in english language
    - Docstrings indentation must be cautiously respected
 
-Exemple de style pour une méthode :
+Exemple:
+"""**OutQuantLab Typing Conventions Package**
 
+This library provides type definitions and specialized classes for performing numerical computations with strict type safety, specifically designed for quantitative financial applications.
+
+---
+
+**Package Organization**
+
+**1. Type Aliases**
+- `Float32` : Represents the NumPy `float32` type for single-precision floating-point numbers.
+- `Int32`   : Represents the NumPy `int32` type for 32-bit integers.
+- `ArrayFloat` : NumPy array specialized in storing `Float32` values.
+- `ArrayInt`   : NumPy array specialized in storing `Int32` values.
+
+**2. Custom Classes**
+- `SeriesDict` : General purpose type for representing a financial series in JSON format.
+- `DataFrameDict` : General purpose type for representing a financial DataFrame in JSON format.
+- `SeriesFloat` : General purpose subclass of pandas Series for storing `float32` data. Attributes include the numeric data and index. The initializer sets up the series with type safety.
+- `DataFrameFloat` : General purpose subclass of pandas DataFrame for handling time-series financial data in `float32`. Attributes include data, index, and columns. The initializer ensures data is stored with strict float type.
+
+---
+
+"""
+
+from typing import TypeAlias, TypedDict
+from numpy import float32, int32
+from numpy.typing import NDArray
+from pandas import DataFrame, DatetimeIndex, Index, MultiIndex, Series
+
+Float32: TypeAlias = float32
+"""**Description**: Represents the NumPy `float32` type for single-precision floating-point numbers.
+
+**Example**:
 ```python
-def optimize_strategy(parameters: dict[str, tuple[float, float]]) -> list[dict]:
-    """Optimize strategy parameters. Used when this happens, and this implementation is useful because of [...]
+val: Float32 = 3.14
+```"""
+
+class DataFrameFloat(DataFrame):
+    """**DataFrameFloat**
     
-    **Args**:
-    - `parameters`: Dictionnary of values to test
-      (ex: {"window": (10, 50), "threshold": (0.1, 0.5)})
-    
-    **Returns**:
-    - `list[dict]`: Best combination sorted by performance
-    
-    **Exemple**:
-    ```python
-    optimize_strategy({"window": (10, 20)})
-    [{"window": 15, "sharpe": 1.2}, ...]
-    ```
-    """
+General purpose subclass of pandas DataFrame optimized for handling time-series financial data in `float32`.
+
+**Attributes**:
+- ``data`` (`ArrayFloat | DataFrame | None`): The primary container of numeric data in `float32`.
+- ``index`` (`DatetimeIndex | None`): Temporal index used for time-series representation.
+- ``columns`` (`list[str] | MultiIndex | Index | None`): Column labels of the DataFrame.
+
+**Initialization**:
+The constructor initializes the DataFrame ensuring that all numeric data is stored as `float32`
+for consistency and performance in quantitative financial analysis.
+
+**Methods**:
+- ``dates``: Property to access the temporal index.
+- ``get_array``: Returns the underlying NumPy array representation.
+- ``get_names``: Retrieves the column names, correctly handling single and multi-index formats.
+- ``sort_data``: Returns a new DataFrameFloat with columns sorted based on the mean of their values.
+- ``convert_to_json``: Exports the DataFrame as a JSON-compatible dictionary.
+"""
+    def __init__(
+        self,
+        data: ArrayFloat | DataFrame | None = None,
+        index: DatetimeIndex | None = None,
+        columns: list[str] | MultiIndex | Index | None = None, # type: ignore
+    ) -> None: ...
+    @property
+    def dates(self) -> DatetimeIndex:
+        """Access and return the temporal index of the DataFrame."""
+        ...
+    def get_array(self) -> ArrayFloat:
+        """Return the underlying NumPy array of the DataFrame."""
+        ...
+    def get_names(self) -> list[str]:
+        """Retrieve the column names."""
+        ...
+    def sort_data(self, ascending: bool) -> "DataFrameFloat":
+        """Return a new DataFrameFloat with columns sorted by their mean values."""
+        ...
+    def convert_to_json(self) -> DataFrameDict:
+        """Export the DataFrame as a JSON-compatible dictionary."""
+        ...
+
