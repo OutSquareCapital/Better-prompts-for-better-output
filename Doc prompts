@@ -33,7 +33,8 @@ Je veux que tu édite/créée le fichier __init__.pyi de manière exhaustive pou
    - Priorité à la lisibilité IDE
    - Cohérence avec mypy --strict
    - Alway in english language
-   - Docstrings indentation must be cautiously respected
+   - Docstrings indentation must be cautiously respected. des fois on verra pas le texte si tu met pas bien les indentations
+   - le typage doit etre IDENTIQUE  a mes implementations. exemple: si j'ai class[T: float]: ... , tu ne dois en AUCUN CAS utiliser le typing outdated python avec generic et TypeVar (par exemple)
 
 Exemple:
 """**OutQuantLab Typing Conventions Package**
