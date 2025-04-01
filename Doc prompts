@@ -22,6 +22,7 @@ Je veux que tu édite/créée le fichier __init__.pyi de manière exhaustive pou
    - Exemples concrets avec valeurs réalistes
    - Utilisation de ... pour les implémentations
    - Pas de duplication depuis les .py
+   - Si des abstracts base class (ABC existent) soit exhaustif uniquement sur l'interface (pareil pour Protocol). les implémentations soit concis (hormis si méthode ou attribut spécifique en plus de l'interface)
 
 4. **Style Demandé** :
    - Professionnel mais exhaustif
