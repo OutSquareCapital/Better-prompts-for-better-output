@@ -1,0 +1,44 @@
+Objectif :
+Je souhaite que les docstrings dans mes fichiers .pyi soient :
+
+    Formatés en Markdown pour une meilleure lisibilité dans les IDE (VSCode/PyCharm).
+
+    Sans # comments, uniquement des docstrings classiques ("""...""").
+
+    Avec une mise en évidence des exemples de code via :
+
+        Blocs ```python pour les exemples.
+
+        Blocs >>>> pour les sorties console.
+
+Exemple de Format Attendu :
+python
+
+def calculer_tva(prix: float, taux: float) -> float:
+    """Calcule la TVA à partir d'un prix et d'un taux.  
+    
+    **Args**:  
+    - `prix` (float): Prix hors taxes (doit être > 0).  
+    - `taux` (float): Taux en décimal (ex: 0.2 pour 20%).  
+
+    **Returns**:  
+    - `float`: Montant de la TVA.  
+
+    **Exemple**:  
+    ```python  
+    >>> calculer_tva(100, 0.2)  
+    20.0  
+    ```  
+
+    **Sortie Console**:  
+    >>> 20.0  
+    """  
+    ...
+
+Contraintes :
+
+    Pas de # Commentaires dans les .pyi, seulement des docstrings. Ceci est une demande stricte.
+
+    Utilisation de ... pour les implémentations vides.
+
+    Sections claires avec titres en gras (**Args**, **Returns**, etc.).
