@@ -12,7 +12,7 @@ Je veux que tu édite le fichier __init__.pyi de manière exhaustive pour mon pa
      * `backticks` pour les noms de paramètres/types
      * ```python blocks pour tous les exemples
    - Pour les classes :
-     * Docstring de classe EXHAUSTIF (concept métier + usage général + init process + attributs)
+     * Docstring de classe EXHAUSTIF, avec une description exhautive(concept métier + usage général), ainsi que ses spécificités techniques et d'implémentation(init process + attributs + exemple)
      * Docstring pour chaque méthode
    - Pour les packages : 
      * Meme principe que pour les classes, donc exhaustif et high level.
@@ -33,6 +33,7 @@ Je veux que tu édite le fichier __init__.pyi de manière exhaustive pour mon pa
    - Priorité à la lisibilité IDE
    - Cohérence avec mypy --strict
    - Alway in english language
+   - Docstrings indentation must be cautiously respected
 
 Exemple de style pour une méthode :
 
