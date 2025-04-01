@@ -21,9 +21,9 @@ Je veux que tu édite/créée le fichier __init__.pyi de manière exhaustive pou
    - Highlight des types dans la doc (ex: `list[Asset]`)
    - Exemples concrets avec valeurs réalistes
    - Utilisation de ... pour les implémentations
-   - Pas de duplication depuis les .py
    - Si des abstracts base class (ABC existent) soit exhaustif uniquement sur l'interface (pareil pour Protocol). les implémentations soit concis (hormis si méthode ou attribut spécifique en plus de l'interface)
-
+   - Importe les modules et package nécessaire pour le typing.
+   - 
 4. **Style Demandé** :
    - Professionnel mais exhaustif
    - Orientation "business logic" claire
@@ -36,6 +36,7 @@ Je veux que tu édite/créée le fichier __init__.pyi de manière exhaustive pou
    - Alway in english language
    - Docstrings indentation must be cautiously respected. des fois on verra pas le texte si tu met pas bien les indentations
    - le typage doit etre IDENTIQUE  a mes implementations. exemple: si j'ai class[T: float]: ... , tu ne dois en AUCUN CAS utiliser le typing outdated python avec generic et TypeVar (par exemple)
+   - AUCUN string, TOUT LES TYPES HINTS doivent être identiques
 
 Exemple:
 """**OutQuantLab Typing Conventions Package**
