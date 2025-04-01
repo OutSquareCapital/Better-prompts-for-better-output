@@ -248,6 +248,117 @@ __all__: list[str] = [
     "SeriesDict",
 ]
 
+EXEMPLE 2:
+"""**OutQuantLab APIs Package**
+
+This package provides APIs for data fetching, server management, and data communication, specifically designed for quantitative financial applications.
+
+---
+
+**Package Organization**
+
+**1. Data Fetching**
+- `fetch_data`: Fetches financial data for a list of assets using Yahoo Finance.
+
+**2. Server Management**
+- `start_server`: Starts a FastAPI server for data communication.
+- `send_data_to_server`: Sends data to the server for storage and retrieval.
+
+**3. Data Retrieval**
+- `get_all_data`: Retrieves all stored data from the server.
+
+---
+
+"""
+
+from outquantlab.structures import DataFrameDict, SeriesDict, DataFrameFloat
+
+
+def fetch_data(assets: list[str]) -> DataFrameFloat:
+    """**fetch_data**
+
+    Fetches financial data for a list of assets using Yahoo Finance.
+
+    **Args**:
+    - `assets` (`list[str]`): A list of asset tickers to fetch data for.
+
+    **Returns**:
+    - `DataFrameFloat`: A DataFrame containing percentage returns for the specified assets.
+
+    **Example**:
+    ```python
+    from outquantlab.apis import fetch_data
+
+    data = fetch_data(assets=["AAPL", "GOOG"])
+    print(data)
+    ```
+    """
+    ...
+
+def start_server() -> None:
+    """**start_server**
+
+    Starts a FastAPI server for data communication.
+
+    **Example**:
+    ```python
+    from outquantlab.apis import start_server
+
+    start_server()
+    ```
+    """
+    ...
+
+def send_data_to_server(id: str, results: DataFrameDict | SeriesDict) -> None:
+    """**send_data_to_server**
+
+    Sends data to the server for storage and retrieval.
+
+    **Args**:
+    - `id` (`str`): A unique identifier for the data.
+    - `results` (`DataFrameDict | SeriesDict`): The data to be stored.
+
+    **Example**:
+    ```python
+    from outquantlab.apis import send_data_to_server
+    from outquantlab.structures import DataFrameDict
+
+    data: DataFrameDict = {
+        "data": [[1.0, 2.0], [3.0, 4.0]],
+        "index": ["Row1", "Row2"],
+        "columns": ["A", "B"]
+    }
+    send_data_to_server(id="example_id", results=data)
+    ```
+    """
+    ...
+
+def get_all_data() -> dict[str, DataFrameDict | SeriesDict]:
+    """**get_all_data**
+
+    Retrieves all stored data from the server.
+
+    **Returns**:
+    - `dict[str, DataFrameDict | SeriesDict]`: A dictionary containing all stored data.
+
+    **Example**:
+    ```python
+    from outquantlab.apis import get_all_data
+
+    data = get_all_data()
+    print(data)
+    ```
+    """
+    ...
+
+__all__: list[str] = [
+    "fetch_data",
+    "start_server",
+    "send_data_to_server",
+    "get_all_data",
+]
+
+FINALISATION:
 une fois arrivé a la fin:
 assure toi que tu as bien mis le fichier dans le bon package
 révérifie que tu n'as pas utilisé de typing outdated (generi, typevar...)
