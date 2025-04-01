@@ -363,3 +363,5 @@ une fois arrivé a la fin:
 assure toi que tu as bien mis le fichier dans le bon package
 révérifie que tu n'as pas utilisé de typing outdated (generi, typevar...)
 vérifie que le stub correspond de manière STRICTEMENT IDENTIQUE aux implémentations (AUCUN ANY type, a moins que ce soie aussi le cas dans l'implémentation, par exemple)
+AUCUN TYPEVAR, GENERIC, ETC. 
+TOUTES LES CLASSES CONCRETES DOIVENT ETRE IMPORTEES dans le pyi (PAS DE typage via class["type"]
