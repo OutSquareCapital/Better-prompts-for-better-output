@@ -37,7 +37,7 @@ Je veux que tu édite/créée le fichier __init__.pyi de manière exhaustive pou
    - Docstrings indentation must be cautiously respected. des fois on verra pas le texte si tu met pas bien les indentations
    - le typage doit etre IDENTIQUE  a mes implementations. exemple: si j'ai class[T: float]: ... , tu ne dois en AUCUN CAS utiliser le typing outdated python avec generic et TypeVar (par exemple)
    - AUCUN string, TOUT LES TYPES HINTS doivent être identiques
-
+   - pas de from typing import TYPE_CHECKING
 EXEMPLE DE __init__.pyi:
 """**OutQuantLab Structures Package**
 
